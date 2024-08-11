@@ -42,7 +42,7 @@ const TabsLayout = () => {
                 headerShown: false,
             tabBarIcon:({icon, focused}) => {
                 <TabIcon
-                    
+                    icon={icons.ho}
                 />
 
 
