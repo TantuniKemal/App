@@ -6,7 +6,7 @@ import React from 'react';
 export default function App(){
     return (
         <View className="flex-1 items-center justify-center bg-white">
-            <Text className="text-3xl font-bold">dd</Text>
+            <Text className="text-3xl font-bold">dsaddasdd</Text>
             
             
             <StatusBar style="auto"/>
