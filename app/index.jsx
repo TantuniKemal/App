@@ -12,9 +12,9 @@ export default function App(){
         <SafeAreaView className="bg-white h-full">
             <ScrollView contentContainerStyle={{height:'100%'}}>
                 <View className="w-full justify-center items-center h-full px-4">
-                    <Image
+                    <Image 
                         source={images.logo}
-                        className="w-[540] h-[84px] item-end"
+                        className="w-[540] h-[84px]"
                         resize='contain'
                     />
                     <View className="mt-8">
