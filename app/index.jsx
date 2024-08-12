@@ -9,16 +9,16 @@ import { Redirect, router } from 'expo-router';
 
 export default function App(){
     return (
-        <SafeAreaView className="bg-newColor h-full">
+        <SafeAreaView className="bg-white h-full">
             <ScrollView contentContainerStyle={{height:'100%'}}>
                 <View className="w-full justify-center items-center h-full px-4">
                     <Image
                         source={images.logo}
-                        className="w-[540] h-[84px]"
+                        className="w-[540] h-[84px] item-end"
                         resize='contain'
                     />
                     <View className="mt-8">
-                        <Text className=" text-3xl text-newTextColor font-pregular text-center">    HOSGELDİNİZ
+                        <Text className=" text-3xl text-newTextColor font-pregular text-center">HOŞGELDİNİZ
                         </Text>
                     </View>
                     <View>
