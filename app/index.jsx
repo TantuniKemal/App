@@ -1,14 +1,42 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-import {Link} from 'expo-router';
-import React from 'react';
+import { ScrollView, Text, View, Image } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { images } from '../constants';
+import  CustomButton  from '../components/CustomButton';
+import { Redirect, router } from 'expo-router';
+
+
 
 export default function App(){
     return (
-        <View className="flex-1 items-center justify-center bg-white">
-            <Text className="text-3xl font-serif">Bircan Toptan</Text>           
-            <StatusBar style="auto"/>
-            <Link href="/home" style={{color: 'blue'}} >Go to Home</Link>
-        </View>
+        <SafeAreaView className="bg-newColor h-full">
+            <ScrollView contentContainerStyle={{height:'100%'}}>
+                <View className="w-full justify-center items-center h-full px-4">
+                    <Image
+                        source={images.logo}
+                        className="w-[540] h-[84px]"
+                        resize='contain'
+                    />
+                    <View className="mt-8">
+                        <Text className=" text-3xl text-newTextColor font-pregular text-center">    HOSGELDİNİZ
+                        </Text>
+                    </View>
+                    <View>
+                        <CustomButton
+                            title="Giriş Yap"
+                            handlePress={() => {router.push('./sign-in')}}
+                            containerStyles={"w-64 mt-7 items-center"}
+                        />
+                    </View>
+                    <View>
+                        <CustomButton
+                            title="Kayıt Ol"
+                            handlePress={() => {router.push('./sign-up')}}
+                            containerStyles={"w-64 mt-7 items-center"}
+                        />
+                    </View>
+                </View>
+            </ScrollView>
+        </SafeAreaView>
     );
 }
