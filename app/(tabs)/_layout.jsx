@@ -1,26 +1,27 @@
 import { View, Text, Image } from 'react-native'
 import { Tabs, Redirect } from 'expo-router'
-import { icons } from '../../constants';
+import { icons } from "../../constants";
 
 const TabIcon = ({icon, color, name, focused}) => {
     return(
-        <View className="items-center justify-center gap-0">
+        <View className="items-center justify-center gap-2">
             <Image
             source={icon}
-            resizeMode='contain'
-            tintColor={color}
+            resizeMode="contain"            tintColor={color}
             className="w-6 h-6"
             />
             <Text className={`${focused ? 'font-psemibold':
-                'font-regular'} text-xs`} style={{color:color}}>
+                'font-pregular'} text-xs`} style={{color:color}}
+            >
             
                  {name}
             </Text>
         </View>
-    )
-}
+    );
+};
 
-const TabsLayout = () => {
+
+const TabLayout = () => {
   return (
    <>
     <Tabs screenOptions={{
@@ -32,7 +33,7 @@ const TabsLayout = () => {
           borderTopWidth: 1,
           borderTopColor: '#232533',
           height: 84,
-        }
+        },
        }}
        >    
         <Tabs.Screen
@@ -40,14 +41,15 @@ const TabsLayout = () => {
             options={{
                 title:"Home",
                 headerShown: false,
-            tabBarIcon:({icon, focused}) => {
+            tabBarIcon:({color, focused}) => (
                 <TabIcon
-                    icon={icons.ho}
+                    icon={require('../../assets/icons/home.png')}
+                    color={color}
+                    name="Anasayfa"
+                    focused={focused}
                 />
-
-
-
-            }
+            
+            ),
             }}
         />
 
@@ -56,4 +58,4 @@ const TabsLayout = () => {
   )
 }
 
-export default TabsLayout
+export default TabLayout
