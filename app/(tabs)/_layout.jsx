@@ -43,7 +43,7 @@ const TabLayout = () => {
                 headerShown: false,
             tabBarIcon:({color, focused}) => (
                 <TabIcon
-                    icon={require('../../assets/icons/home.png')}
+                    icon={icons.home}
                     color={color}
                     name="Anasayfa"
                     focused={focused}
@@ -52,6 +52,55 @@ const TabLayout = () => {
             ),
             }}
         />
+        <Tabs.Screen
+            name="order"
+            options={{
+                title:"Order",
+                headerShown: false,
+            tabBarIcon:({color, focused}) => (
+                <TabIcon
+                    icon={icons.shopping}
+                    color={color}
+                    name="Siparişlerim"
+                    focused={focused}
+                />
+            
+            ),
+            }}
+        />
+        <Tabs.Screen
+            name="profile"
+            options={{
+                title:"Profile",
+                headerShown: false,
+            tabBarIcon:({color, focused}) => (
+                <TabIcon
+                    icon={icons.user}
+                    color={color}
+                    name="Hesabım"
+                    focused={focused}
+                />
+            
+            ),
+            }}
+        />
+        <Tabs.Screen
+            name="communication"
+            options={{
+                title:"Communicaiton",
+                headerShown: false,
+            tabBarIcon:({color, focused}) => (
+                <TabIcon
+                    icon={icons.message}
+                    color={color}
+                    name="İletişim"
+                    focused={focused}
+                />
+            
+            ),
+            }}
+        />
+        
 
     </Tabs>
    </>
