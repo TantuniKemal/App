@@ -11,6 +11,9 @@ import plus from "../assets/icons/plus.png";
 import shopping from "../assets/icons/shopping.png";
 import smartPhone from "../assets/icons/smartPhone.png";
 import user from "../assets/icons/user.png";
+import eye from "../assets/icons/eye.png";
+import eyeHide from "../assets/icons/eyeHide.png";
+
 
 export default {
      change,
@@ -26,5 +29,7 @@ export default {
      shopping,
      smartPhone,
      user,
+     eye,
+     eyeHide,
 };
 
