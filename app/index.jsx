@@ -18,7 +18,7 @@ export default function App(){
                         resize='contain'
                     />
                     <View className="mt-8">
-                        <Text className=" text-3xl text-newTextColor font-pregular text-center">HOŞGELDİNİZ
+                        <Text className=" text-3xl text-newTextColor font-pregular text-center">HOŞGELDİNİZzzz
                         </Text>
                     </View>
                     <View>
